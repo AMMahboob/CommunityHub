@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- importing css file -->
+        <link rel="stylesheet" href="css/login.css">
+
+        <!-- importing google font. -->
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+
+        <!-- Setting Title and title icon -->
+        <link rel="shortcut icon" href="images/chicon.jpg"/>
+        <title>The Community Hub</title>
+    </head>
+
+
+<!-- removing underline from all links -->
+<STYLE>A {text-decoration: none;} </STYLE>
+
+    <body>
+        <header class="header">
+            <!-- community logo display -->
+            <img src="images/thecommunityhublogo.jpg" alt="Together Everyone Achieves More" class="logo">
+            
+            <!-- header menu options display -->
+            <ul class="hMenu" >
+            <li><a title="Introduction to The Community Hub" href="iamnew.html" style=" background-color:azure">I AM NEW</a></li>
+            <li><a title="Available to Registered Users Only" href="#" style="color:lightgray">NEWS ROOM</a></li>
+            <li><a hidden id="logIn" title="Enter Member Dashboard Area" href="login.html" >LOGIN</a></li>
+            <li><a hidden id="logOut" title="Enter Member Dashboard Area" href="login.html" >LOGOUT</a></li>
+            <li><a id="joinTheCommunityHub" title="Become a Community Hub Member" href="register.html" >JOIN THE COMMUNITY HUB</a></li>
+            <li><a href="homepage.html">
+                   <img title="Return Back to Home page" alt="Return to Homepage" src="images/back.jpg" style="width:40px; height:30px;">
+                 </a>
+            </li>
+            </ul>
+
+        </header>
+     <!-- <hr style="border-top: 0.001cm dotted #0085ca;"> </hr><br> -->
+
+
+
+<!-- ~=|~=|~=|~=|~=|~=|~=|~===THIS PAGE MID CONTENTS START~=|~=|~=|~=|~=|~=|~=|~===> -->
+     <div class="midContainer">
+      <div class="mid1">
+
+        <!-- seperator Line -->
+        <!-- <hr style="height:1px;border-width:1px;border-color: rebeccapurple;background-color: red;"> -->
+        <br>
+
+        <!-- Te Class loginGroup START--- shall be hidden once login authentication successful. -->
+        <div class="loginGroup" id="forLoginOnly">
+            
+            <h2 class="bodyText" id="hello">Login</h2>
+        
+            <!-- community picture -->
+            <img id="imageHands" src="images/thecommunityhubmix.jpg" alt="Together Everyone Achieves the Most">
+        
+            <h5 class="bodyText">Log in with your details you entered during registration.
+            <!-- return back to home page link -->
+            <br>Don't have an account? <a class="bodyText" id="joinTheCommunity" href="register.html" style="text-shadow: blueviolet;">REGISTER</a></h5>
+            <br>
+    
+            <!-- New user data input starts here -->
+            <div class="login" id="login">
+                <label>*Email:</label>
+                <br>
+                <input class="inputField" id="email" type="text" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i" placeholder="Enter your Email" value="">
+                <br><br>
+                <label>*Password:</label>
+                <br>
+                <input class="inputField" id="password" type="password" placeholder="Enter your Password" value="">
+                <br><br>
+                <br><br>
+                <button id="loginButton" type="submit">Login</button>
+            </div>
+        </div>
+        <!-- Te Class loginGroup END--- shall be hidden once login authentication successful. -->
+        
+        <!-- Member profile management START -->
+        
+        <div class="accountManagement" id="memAccountManager">
+            <div hidden class="accountManagementTitle" id="accountManagerTitle">
+                <h1>Profile Management Dashboard</h1>
+            </div>
+            <div hidden class="profileManagement" id="memProfileManager">
+                <div class="memData" id="memId">
+                    <h3>
+                    <label class="labels">Membership Number/ID:</label></label>
+                    <input readonly type="text" title="Your Membership Number" id="mId" value="">
+                    </h3>
+                </div><br>
+                <div class="memData" id="memFirstName">
+                    <label class="labels">*First Name:</label>
+                    <br>
+                    <input disabled class="mDataField" type="text" title="Enter your First Name" id="mFirstName" value="">
+                </div><br><br>
+                <div class="memData" id="memLastName">
+                    <label class="labels">*Last Name:</label>
+                    <br>
+                    <input disabled class="mDataField" type="text" title="Enter your Last Name" id="mLastName" value="">
+                    </div><br><br>
+                <div class="memData" id="memEmail">
+                    <label class="labels">*Email:</label>
+                    <br>
+                    <input disabled class="mDataField" type="text" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i" title="Enter your Email" id="mEmail" value="">
+                </div><br><br>
+                <div class="memData" id="memAddress">
+                    <label class="labels">*Postal Address:</label>
+                    <br>
+                    <input disabled class="mDataField" type="text" title="Enter your Full Address" id="mAddress" value="">
+                </div><br><br>
+            </div>
+
+
+            <div hidden class="passwordManagement" id="memPasswordManager">
+                <div class="memPassData" id="memPassId">
+                    <h3>
+                        <label class="labels">Membership Number/ID:</label></label>
+                        <input readonly class="mPassDataField" type="text" title="Your Membership Number" id="mPassId" value="">
+                    </h3>
+                </div>
+                <div class="memPassData" id=memPassword>
+                    <label class="labels">*Current Password:</label>
+                    <br>
+                    <input disabled class="mPassDataField" type="password" title="Enter your Password" id="mPassword" value="">
+                </div>
+                <br><br>
+                <div class="memPassData" id="memNewPassword1">
+                    <label class="labels">*New Password:</label>
+                    <br>
+                    <input disabled class="mPassDataField" type="password" title="Enter your New Password" id="mNewPassword1" value="">
+                </div>
+                <br><br>
+                <div class="memPassData" id="memNewPassword2">
+                    <label class="labels">*Confirm New Password:</label>
+                    <br>
+                    <input disabled class="mPassDataField" type="password" title="Re-Enter your New Password" id="mNewPassword2" value="">
+                </div>
+                <br><br>
+                <br><br>
+
+            </div>
+
+            <br>
+            <div class="acManagementButtons" id="acManagementBtns">
+                <button hidden class="mSubmitButton" id="editProfileBtn" type="submit">Edit Profile</button>
+                <button hidden class="mSubmitButton" id="saveChangesBtn" type="submit">Save Changes</button>
+                <button hidden class="mSubmitButton" id="changePasswordBtn" type="submit">Change Password</button>
+                <button hidden class="mPassSubmitButton" id="savePasswordBtn" type="submit">Save New Password</button>
+                <button hidden class="mCancelButton" id="mCancelBtn" type="submit">Cancel</button>
+                <br><br><br><br>
+                <button hidden class="mSubmitButton" id="deleteAccountBtn" type="submit">DELETE ACCOUNT</button>
+                <br><br><br><br><br>
+            </div>
+        </div>
+        <!-- Member account management END -->
+
+    </div>
+</div>
+
+<!-- ~=|~=|~=|~=|~=|~=|~=|~===THIS PAGE MID CONTENTS END~=|~=|~=|~=|~=|~=|~=|~===> -->
+
+
+
+        <div class="footerContainer">
+            <footer class="footer">
+
+                <ul class="fMenu1">
+                    <h4 style="color:black">ABOUT THE SITE</h4>
+                    <li><a title="Introduction to The Community Hub" href="iamnew.html">I Am New</a></li>
+                    <li><a title="Our Terms and Conditions" href="termsandconditions.html">Terms and Conditions</a></li>
+                    <li><a title="Our Privacy Policy" href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a title="Our Sponsors List" href="sponsors.html">Sponsors</a></li>
+                </ul>
+
+                <ul class="fMenu2" >
+                    <h4 style="color:black">CONNECT WITH US</h4>
+                    <li><a title="Community Hub on Facebook" href="http:/www.facebook.com/">Facebook</a></li>
+                    <li><a title="Community Hub on Instagram" href="http:/www.instagram.com/">Instagram</a></li>
+                    <li><a title="Community Hub on Twitter" href="http:/www.twitter.com/">Twitter</a></li></li>
+                    <li><a title="Community Hub on Linked" href="http:/www.linkedin.com/">LinkedIn</a></li>
+                </ul>
+
+                <ul class="fMenu3" >
+                    <h4 style="color:black">CONTACT US</h4>
+                    <li style="font-weight: 100;"><b>Address:</b> 313 King Street, New Suburb</li>
+                    <li>VIC XXXX, Australia</li>
+                    <li><b>Email:</b> communityhub@XXXXX.XXX</li>
+                    <li><b>Phone:</b> +61 XXX XXX XXX</li>
+                    <li id="acknowledgement" style="font-weight:lighter; font-size:100%">We acknowledge the Traditional Custodians <br>of country throughout Australia and their <br>connections to land, sea and community. <br>We pay our respect to their Elders past and <br>present and extend that respect to all <br>Aboriginal and Torres Strait Islander peoples.</li>
+                </ul>
+            
+            </footer>
+
+        </div>
+
+        <script src="js/loginbundle.js" async defer></script>
+        <!-- <script type="module" src="js/loginbundle.js" async defer></script> -->
+    </body>
+</html>
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- importing css file -->
+        <link rel="stylesheet" href="css/register.css">
+
+        <!-- importing google font. -->
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+
+        <!-- Setting Title and title icon -->
+        <link rel="shortcut icon" href="images/chicon.jpg"/>
+        <title>The Community Hub</title>
+        
+        <!-- Importing GoogleMap Address Autocomplete API -->
+        <!-- <script
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initAutocomplete&libraries=places&v=weekly" defer>
+        </script> -->
+        
+        <!-- importing requjire.js -->
+        <!-- <script src = "node_modules/requirejs/require.js"></script> -->
+        <!-- <script type="text/javascript" src="http://requirejs.org/docs/release/2.3.2/minified/require.js"></script> -->
+        
+        
+        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.js"></script>      -->
+
+
+
+    </head>
+    
+    <body>
+        <form>    
+        <h1 id="hello">The Community Hub</h1>
+        <h3 id="registerationform">Registeration Form</h3>
+        <h5 id="registrationbenefit">Registering allows you to access everything in the platform including exclusive member only benefits. Once registered you can update your profile to tell us more about your interests.</h5>
+        <hr style="height:1px;border-width:1px;border-color: rebeccapurple;background-color: red;">
+    
+        <!-- return back to home page link -->
+        <a href="homepage.html">
+            <img id="backToHomepage"title="Return Back to Home page" alt="Return to Homepage" src="images/back.jpg" style="width:40px; height:30px;"></a>
+            <br><br>
+    
+    <div id="regForm1" class="regForms">
+
+        <img src="images/community.jpg" alt="Together Everyone Achieves the Most" style="float:right ;height:50vh; width:60vw">
+        
+        <!-- New member data input form START -->
+        <div class="regdata">
+            <label class="labels">*First Name:</label>
+            <input type="text" class="datafield" placeholder="Enter your First Name" id="firstname" value="">
+        </div><br>
+        <div class="regdata">
+            <label class="labels">*Last Name:</label>
+            <input type="text" class="datafield" placeholder="Enter your Last Name" id="lastname" value="">
+        </div><br>
+        <div class="regdata">
+            <label class="labels">*Email:</label>
+            <input type="text" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i" class="datafield" placeholder="Enter your Email" id="email" value="">
+        </div><br>
+        <div class="regdata">
+            <label class="labels">*Postal Address:</label>
+            <input type="text" class="datafield" placeholder="Enter your Full Address" id="address" value="">
+        </div><br>
+        <div class="regdata">
+            <label class="labels">*Password:</label>
+            <input type="password" class="datafield" placeholder="Enter your Password" id="password1" value="">
+        </div><br>
+        <div class="regdata">
+            <label class="labels">*Confirm Password:</label>
+            <input type="password" class="datafield" placeholder="Confirm your Password" id="password2" value="">
+        </div><br>
+    </div>
+
+    </form>
+
+    <div id="btns" class="buttons">
+        <br>
+        <button class="submitbutton" id="register" type="submit">Register</button>
+        
+        <button class="submitbutton" id="clearform" type="submit">Clear</button>
+        <!-- New member data input form END -->        
+
+    </div>
+
+
+        <script defer src="js/registerbundle.js"></script>
+        <!-- <script type="module" defer src="js/register.js"></script> -->
+                
+    </body>
+</html>

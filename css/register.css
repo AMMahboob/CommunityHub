@@ -1,0 +1,4 @@
+#regForm1, #btns{
+    margin-left: 40px;
+}
+#backToHomepage:hover{ border:2px solid red;  box-shadow: 0 0 10px #333; }
